@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <rdmgr>
+  <timestamp type="u64_t">1366656928</timestamp>
+  <hostname>illDesktop</hostname>
+  <os>windows</os>
+  <product>Intel® Inspector XE 2013 Update 4</product>
+  <buildNumber type="s32_t">270277</buildNumber>
+  <logicalCPUCount type="s32_t">4</logicalCPUCount>
+  <CPUFrequency type="s64_t">2670000000</CPUFrequency>
+ </rdmgr>
+ <All_Configurations-All_Platforms>
+  <target_settings>
+   <result_pattern>r@@@{at}</result_pattern>
+   <workloads>
+    <launch type="pointer" type_id="dasID_cctrl2::ApplicationWorkload" ptr_type="dasID_cctrl2::IWorkload">
+     <workload>
+      <targetName>launch</targetName>
+      <result_directory.path>E:\Code\illMesh\illMesh\My Inspector XE Results - illMesh\r@@@{at}</result_directory.path>
+      <launch_app.app_to_launch>E:\Code\illMesh\Debug\illMesh.exe</launch_app.app_to_launch>
+      <launch_app.working_folder>E:\Code\illMesh\Debug</launch_app.working_folder>
+      <launch_app.app_parameters>-mergemesh E:\Code\MeshExport\HangarHallA-.illmesh E:\Code\MeshExport\HangarHallA.illmesh E:\Code\MeshExport\HangarHallA0.illmesh E:\Code\MeshExport\HangarHallA1.illmesh</launch_app.app_parameters>
+      <search_directories>
+       <item>
+        <value>sym=E:/Code/illMesh/Debug</value>
+       </item>
+       <item>
+        <value>sym=E:/Code/illMesh</value>
+       </item>
+      </search_directories>
+      <context>
+       <contextValue>
+        <id>appdebug</id>
+        <value>off</value>
+       </contextValue>
+       <contextValue>
+        <id>custom_debugger</id>
+        <value></value>
+       </contextValue>
+       <contextValue>
+        <id>debug_this_problem</id>
+        <value></value>
+       </contextValue>
+       <contextValue>
+        <id>debug_using</id>
+        <value>gdb</value>
+       </contextValue>
+       <contextValue>
+        <id>heartbeat</id>
+        <value type="bool">true</value>
+       </contextValue>
+       <contextValue>
+        <id>modules_switch</id>
+        <value>knob.modules_switch.include</value>
+       </contextValue>
+       <contextValue>
+        <id>mrte_mode</id>
+        <value>auto</value>
+       </contextValue>
+       <contextValue>
+        <id>process_for_analysis</id>
+        <value></value>
+       </contextValue>
+       <contextValue>
+        <id>suppressions</id>
+        <value>delete</value>
+       </contextValue>
+      </context>
+     </workload>
+    </launch>
+   </workloads>
+  </target_settings>
+ </All_Configurations-All_Platforms>
+</root>

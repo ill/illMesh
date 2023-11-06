@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C63162BC-EFA7-4CB7-872B-51871EC515BB}</ProjectGuid>
+    <RootNamespace>illMesh</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>..\..\dependancies\Assimp\include;illEngine;.;..\..\dependancies\glm-0.9.4.1;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>..\..\dependancies\Assimp\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>..\..\dependencies\Assimp\include;illEngine;.;..\..\dependencies\glm-0.9.4.1;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>..\..\dependencies\Assimp\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Converter\Animation.cpp" />
+    <ClCompile Include="Converter\AnimSet.cpp" />
+    <ClCompile Include="Converter\asciiDump.cpp" />
+    <ClCompile Include="Converter\Importer.cpp" />
+    <ClCompile Include="Converter\main.cpp" />
+    <ClCompile Include="Converter\Mesh.cpp" />
+    <ClCompile Include="Converter\MeshMerger.cpp" />
+    <ClCompile Include="Converter\Skeleton.cpp" />
+    <ClCompile Include="illEngine\FileSystem-Stdio\StdioFile.cpp" />
+    <ClCompile Include="illEngine\FileSystem-Stdio\StdioFileSystem.cpp" />
+    <ClCompile Include="illEngine\Logging\serial\SerialLogger.cpp" />
+    <ClCompile Include="illEngine\Logging\StdioLogger.cpp" />
+    <ClCompile Include="illEngine\Util\util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Converter\AnimSet.h" />
+    <ClInclude Include="Converter\asciiDump.h" />
+    <ClInclude Include="Converter\Importer.h" />
+    <ClInclude Include="Converter\Animation.h" />
+    <ClInclude Include="Converter\Mesh.h" />
+    <ClInclude Include="Converter\MeshMerger.h" />
+    <ClInclude Include="Converter\Skeleton.h" />
+    <ClInclude Include="illEngine\FileSystem-Stdio\StdioFile.h" />
+    <ClInclude Include="illEngine\FileSystem-Stdio\StdioFileSystem.h" />
+    <ClInclude Include="illEngine\FileSystem\File.h" />
+    <ClInclude Include="illEngine\FileSystem\FileSystem.h" />
+    <ClInclude Include="illEngine\Logging\LogDestination.h" />
+    <ClInclude Include="illEngine\Logging\Logger.h" />
+    <ClInclude Include="illEngine\Logging\logging.h" />
+    <ClInclude Include="illEngine\Logging\serial\SerialLogger.h" />
+    <ClInclude Include="illEngine\Logging\StdioLogger.h" />
+    <ClInclude Include="illEngine\Util\serial\casting.h" />
+    <ClInclude Include="illEngine\Util\CopiedData.h" />
+    <ClInclude Include="illEngine\Util\debug.h" />
+    <ClInclude Include="illEngine\Util\endian.h" />
+    <ClInclude Include="illEngine\Util\Geometry\BoundingVolume.h" />
+    <ClInclude Include="illEngine\Util\Geometry\Box.h" />
+    <ClInclude Include="illEngine\Util\Geometry\BoxIterator.h" />
+    <ClInclude Include="illEngine\Util\Geometry\ConvexMeshIterator.h" />
+    <ClInclude Include="illEngine\Util\Geometry\ConvexMeshIteratorDebug.h" />
+    <ClInclude Include="illEngine\Util\Geometry\Frustum.h" />
+    <ClInclude Include="illEngine\Util\Geometry\geomUtil.h" />
+    <ClInclude Include="illEngine\Util\Geometry\GridVolume3D.h" />
+    <ClInclude Include="illEngine\Util\Geometry\Line.h" />
+    <ClInclude Include="illEngine\Util\Geometry\Line2.h" />
+    <ClInclude Include="illEngine\Util\Geometry\LineIterator.h" />
+    <ClInclude Include="illEngine\Util\Geometry\MeshData.h" />
+    <ClInclude Include="illEngine\Util\Geometry\MeshEdgeList.h" />
+    <ClInclude Include="illEngine\Util\Geometry\Plane.h" />
+    <ClInclude Include="illEngine\Util\Geometry\Ray.h" />
+    <ClInclude Include="illEngine\Util\Geometry\Sphere.h" />
+    <ClInclude Include="illEngine\Util\Geometry\Transform.h" />
+    <ClInclude Include="illEngine\Util\Illmesh\IllmeshLoader.h" />
+    <ClInclude Include="illEngine\Util\serial\Array.h" />
+    <ClInclude Include="illEngine\Util\serial\LruCache.h" />
+    <ClInclude Include="illEngine\Util\serial\Pool.h" />
+    <ClInclude Include="illEngine\Util\serial\RefCountPtr.h" />
+    <ClInclude Include="illEngine\Util\serial\ResourceBase.h" />
+    <ClInclude Include="illEngine\Util\serial\ResourceManager.h" />
+    <ClInclude Include="illEngine\Util\serial\StaticList.h" />
+    <ClInclude Include="illEngine\Util\serial\UidGenerator.h" />
+    <ClInclude Include="illEngine\Util\serial\VectorManager.h" />
+    <ClInclude Include="illEngine\Util\util.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
